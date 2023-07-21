@@ -1,0 +1,8 @@
+Sub SearchItem()
+
+    With New ChromeDriver
+        .get "https://torrentz2.eu/"
+        .FindElementByCss("#thesearchbox", timeout:=10000).SendKeys "Udemy"  ''wait for the element upto 10 seconds
+        .FindElementByCss("#thesearchbutton").Click
+    End With
+End Sub
